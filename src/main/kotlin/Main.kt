@@ -2,13 +2,25 @@
 
 fun main() {
 
-    var number = mutableListOf<Double>(10.0, 15.0, 5.0, 8.0, 7.0)
+    var number = mutableListOf<Double>()
+
+    while (number.size < 5) {
+        number += readLine()!!.toDouble()
+    }
 
     val allCase = caseMake(number.toMutableList())
 
+    val ans = Calcul(allCase)
+
+    println("사용숫자 : ${number.joinToString{it.toInt().toString()}}")
+
+    if (ans.fifteenChecker) {
+        println("15만들 수 있지롱")
+        println(ans.answer.joinToString("\n"))
+    } else {
+        println("이건 안되넹~")
+    }
 
 
-    println("all case : ${allCase.joinToString()}")
-    println("all case size : ${allCase.size}")
 
 }

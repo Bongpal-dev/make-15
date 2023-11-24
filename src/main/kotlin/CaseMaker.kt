@@ -1,7 +1,7 @@
 fun caseMake(caseNumber: MutableList<Double>): MutableList<MutableList<Double>>{
+
     var makeAllCase = mutableListOf<MutableList<Double>>()
     var nowCase = mutableListOf<Double>()
-
 
     caseNumber.sort()
 
